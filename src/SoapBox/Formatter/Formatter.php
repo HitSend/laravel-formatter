@@ -28,7 +28,7 @@ class Formatter {
 	 *
 	 * @return Formatter
 	 */
-	public static function make($data, $type) {
+	public function make($data, $type) {
 		if (in_array($type, self::$supportedTypes)) {
 			$parser = null;
 			switch ($type) {
@@ -55,7 +55,7 @@ class Formatter {
 		);
 	}
 
-	private function __construct($parser) {
+	public function __construct($parser = false) {
 		$this->parser = $parser;
 	}
 

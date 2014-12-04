@@ -28,6 +28,22 @@ Through composer.json:
 
 ```
 
+and run `composer update` from terminal to download files.
+
+update `app.php` file in `app/config` directory:
+
+```php
+'providers' => array(
+  'SoapBox\Formatter\FormatterServiceProvider',
+),
+```
+
+```php
+alias => array(
+    'Formatter'          => 'SoapBox\Formatter\Facades\Formatter',
+),
+```
+
 ## Parsers
 All of the following are supported formats that the formatter can read from.
 * Array
@@ -45,12 +61,6 @@ All of the following are formats that are supported for output.
 * YAML
 
 ## General Usage
-
-__Including The Formatter__
-
-```php
-use SoapBox\Formatter\Formatter;
-```
 
 __Supported Types__
 
@@ -95,4 +105,3 @@ __PHP Export__
 ```php
 $export = var_export($formatter->toArray());
 ```
-
