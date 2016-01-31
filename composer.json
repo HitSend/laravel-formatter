@@ -1,9 +1,9 @@
 {
-	"name": "soapbox/laravel-formatter",
+	"name": "beggiatom/laravel5-formatter",
 	"type": "library",
 	"description": "A formatting library that converts data output between XML, CSV, JSON, TXT, YAML and a few others.",
 	"keywords": ["laravel", "formatter", "data", "convert", "csv", "xml", "yaml"],
-    "homepage": "http://github.com/SoapBox/laravel-formatter",
+    "homepage": "http://github.com/beggiatom/laravel5-formatter",
     "license": "MIT",
 	"version": "2.0",
 	"authors": [

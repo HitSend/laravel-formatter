@@ -20,7 +20,7 @@ class FormatterServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function boot() {
-		$this->package('soapbox/laravel-formatter');
+		//$this->package('soapbox/laravel-formatter');
 	}
 
 	/**
