@@ -1,6 +1,6 @@
-<?php namespace SoapBox\Formatter\Test;
+<?php namespace wgerges\Formatter\Test;
 
-use SoapBox\Formatter\Formatter;
+use wgerges\Formatter\Formatter;
 
 class ParserTest extends TestCase {
 
@@ -39,10 +39,10 @@ class ParserTest extends TestCase {
 	 */
 	public function testCSVToArray() {
 		$data = 'foo,bar,bing,bam,boom';
-
-		$actual = Formatter::make($data, Formatter::CSV)->toArray();
+		print("----------------------------");
+		$actual = Formatter::make($data, Formatter::CSV)->toArray();print("+++++++++++++++>");print_r($actual);
 		$expected = array('foo','bar','bing','bam','boom');
-
+		print("----------------------------");
 		$this->assertEquals($expected, $actual);
 	}
 

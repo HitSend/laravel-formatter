@@ -1,9 +1,9 @@
-<?php namespace SoapBox\Formatter\Test\Parsers;
+<?php namespace wgerges\Formatter\Test\Parsers;
 
 use stdClass;
-use SoapBox\Formatter\Test\TestCase;
-use SoapBox\Formatter\Parsers\Parser;
-use SoapBox\Formatter\Parsers\ArrayParser;
+use wgerges\Formatter\Test\TestCase;
+use wgerges\Formatter\Parsers\Parser;
+use wgerges\Formatter\Parsers\ArrayParser;
 
 class ArrayParserTest extends TestCase {
 

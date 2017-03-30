@@ -1,11 +1,11 @@
-<?php namespace SoapBox\Formatter;
+<?php namespace wgerges\Formatter;
 
 use InvalidArgumentException;
-use SoapBox\Formatter\Parsers\ArrayParser;
-use SoapBox\Formatter\Parsers\CsvParser;
-use SoapBox\Formatter\Parsers\JsonParser;
-use SoapBox\Formatter\Parsers\XmlParser;
-use SoapBox\Formatter\Parsers\YamlParser;
+use wgerges\Formatter\Parsers\ArrayParser;
+use wgerges\Formatter\Parsers\CsvParser;
+use wgerges\Formatter\Parsers\JsonParser;
+use wgerges\Formatter\Parsers\XmlParser;
+use wgerges\Formatter\Parsers\YamlParser;
 
 class Formatter {
 	/**

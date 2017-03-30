@@ -1,4 +1,4 @@
-<?php namespace SoapBox\Formatter\Parsers;
+<?php namespace wgerges\Formatter\Parsers;
 
 class XmlParser extends Parser {
 
@@ -6,7 +6,7 @@ class XmlParser extends Parser {
 
 	/**
 	 * Ported from laravel-formatter
-	 * https://github.com/SoapBox/laravel-formatter
+	 * https://github.com/wgerges/laravel-formatter
 	 *
 	 * @author  Daniel Berry <daniel@danielberry.me>
 	 * @license MIT License (see LICENSE.readme included in the bundle)
@@ -20,6 +20,11 @@ class XmlParser extends Parser {
 		$result = [];
 
 		foreach ((array) $temp as $key => $value) {
+		    if($key === "@attributes")
+			$result['_'.key($value)] = $value[key($value)];				
+		    elseif(count($value) < 1)
+			$result[$key] = '';
+		    else
 			$result[$key] = (is_array($value) or is_object($value)) ? $this->objectify($value) : $value;
 		}
 

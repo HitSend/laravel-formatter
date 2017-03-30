@@ -1,6 +1,6 @@
-<?php namespace SoapBox\Formatter\Test;
+<?php namespace wgerges\Formatter\Test;
 
-use SoapBox\Formatter\Formatter;
+use wgerges\Formatter\Formatter;
 
 class FormatterTest extends TestCase {
 

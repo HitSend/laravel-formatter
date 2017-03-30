@@ -1,4 +1,4 @@
-<?php namespace SoapBox\Formatter;
+<?php namespace wgerges\Formatter;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -20,7 +20,7 @@ class FormatterServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function boot() {
-		$this->package('soapbox/laravel-formatter');
+		$this->package('wgerges/laravel-formatter');
 	}
 
 	/**

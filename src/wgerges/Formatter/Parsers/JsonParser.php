@@ -1,4 +1,4 @@
-<?php namespace SoapBox\Formatter\Parsers;
+<?php namespace wgerges\Formatter\Parsers;
 
 class JsonParser extends Parser {
 

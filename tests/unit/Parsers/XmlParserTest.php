@@ -1,8 +1,8 @@
-<?php namespace SoapBox\Formatter\Test\Parsers;
+<?php namespace wgerges\Formatter\Test\Parsers;
 
-use SoapBox\Formatter\Test\TestCase;
-use SoapBox\Formatter\Parsers\Parser;
-use SoapBox\Formatter\Parsers\XmlParser;
+use wgerges\Formatter\Test\TestCase;
+use wgerges\Formatter\Parsers\Parser;
+use wgerges\Formatter\Parsers\XmlParser;
 
 class XmlParserTest extends TestCase {
 

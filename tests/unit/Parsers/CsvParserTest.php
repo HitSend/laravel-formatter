@@ -1,8 +1,8 @@
-<?php namespace SoapBox\Formatter\Test\Parsers;
+<?php namespace wgerges\Formatter\Test\Parsers;
 
-use SoapBox\Formatter\Test\TestCase;
-use SoapBox\Formatter\Parsers\Parser;
-use SoapBox\Formatter\Parsers\CsvParser;
+use wgerges\Formatter\Test\TestCase;
+use wgerges\Formatter\Parsers\Parser;
+use wgerges\Formatter\Parsers\CsvParser;
 
 class CsvParserTest extends TestCase {
 
