@@ -48,7 +48,7 @@ class Formatter {
 					$parser = new YamlParser($data);
 					break;
 			}
-			return new Formatter($parser, $type);
+			return new Formatter($parser);
 		}
 		throw new InvalidArgumentException(
 			'make function only accepts [csv, json, xml, array] for $type but ' . $type . ' was provided.'
