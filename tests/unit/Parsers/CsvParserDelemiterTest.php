@@ -27,14 +27,14 @@ bar;far';
     public function testtoArrayReturnsCsvArrayRepresentation()
     {
         $expected = [['foo' => 'bar', 'boo' => 'far']];
-        $parser   = new CsvParser($this->simpleCsv, ';');
+        $parser = new CsvParser($this->simpleCsv, ';');
         $this->assertEquals($expected, $parser->toArray());
     }
 
     public function testtoJsonReturnsJsonRepresentationOfNamedArray()
     {
         $expected = '[{"foo":"bar","boo":"far"}]';
-        $parser   = new CsvParser($this->simpleCsv, ';');
+        $parser = new CsvParser($this->simpleCsv, ';');
         $this->assertEquals($expected, $parser->toJson());
     }
 
