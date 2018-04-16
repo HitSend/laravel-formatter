@@ -10,6 +10,7 @@ Changelog
 - Add support for laravel 5
 - add package discovery for laravel 5
 - add support delimiter to a csv
+- add support enclosure to a csv
 
 Formatter Bundle
 ================
@@ -81,6 +82,7 @@ __Making Your First Formatter(s)__
 $formatter = Formatter::make($jsonString, Formatter::JSON);
 $formatter = Formatter::make($yamlString, Formatter::YAML);
 $formatter = Formatter::make($array, Formatter::ARR);
+$formatter = Formatter::make($data = $csvContent, $type = Formatter::CSV, $delimiter = ',', $enclosure = '"'); // for csv
 ...
 ```
 
