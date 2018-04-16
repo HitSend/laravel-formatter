@@ -8,14 +8,15 @@ class CsvParser extends Parser
 {
     private $csv;
 
-    public function __construct($data, $delimiter = null)
+    public function __construct($data, $delimiter = null, $enclosure = null)
     {
         if (is_string($data)) {
             $this->csv = Reader::createFromString($data);
             if ($delimiter) {
                 $this->csv->setDelimiter($delimiter);
             }
-            $this->csv->setEnclosure('|');
+
+            $this->csv->setEnclosure($enclosure ?: '|');
         } else {
             throw new InvalidArgumentException(
                 'CsvParser only accepts (string) [csv] for $data.'
@@ -46,5 +47,10 @@ class CsvParser extends Parser
         }
 
         return $result;
+    }
+
+    public function getEnclosure()
+    {
+        return $this->csv->getEnclosure();
     }
 }

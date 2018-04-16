@@ -29,18 +29,19 @@ class Formatter
     /**
      * Make: Returns an instance of formatter initialized with data and type
      *
-     * @param  mixed       $data      The data that formatter should parse
-     * @param  string      $type      The type of data formatter is expected to parse
-     * @param  string      $delimiter The delimitation of data formatter to csv
-     * @return Formatter
+     * @param  mixed $data The data that formatter should parse
+     * @param  string $type The type of data formatter is expected to parse
+     * @param  string $delimiter The delimitation of data formatter to csv
+     * @param  string $enclosure The field enclosure character of csv
+     * @return \SoapBox\Formatter\Formatter
      */
-    public static function make($data, $type, $delimiter = null)
+    public static function make($data, $type, $delimiter = null, $enclosure = null)
     {
         if (in_array($type, self::$supportedTypes)) {
             $parser = null;
             switch ($type) {
                 case self::CSV:
-                    $parser = new CsvParser($data, $delimiter);
+                    $parser = new CsvParser($data, $delimiter, $enclosure);
                     break;
                 case self::JSON:
                     $parser = new JsonParser($data);
