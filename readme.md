@@ -10,6 +10,7 @@ Changelog
 - Add support for laravel 5
 - add package discovery for laravel 5
 - add support delimiter to a csv
+- add support enclosure to a csv
 
 Formatter Bundle
 ================
