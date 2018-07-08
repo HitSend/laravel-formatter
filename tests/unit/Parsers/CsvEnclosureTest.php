@@ -24,8 +24,8 @@ class CsvEnclosureTest extends TestCase
 
         $this->assertEquals($parser->getEnclosure(), '|');
     }
-
-    public function testToArrayReturnsCSvArrayRepresentation()
+    
+    public function testToArrayReturnsCsvArrayRepresentation()
     {
         $expected = [['foo' => 'bar', 'boo' => 'far']];
         $parser = new CsvParser($this->simpleCsv, ';', '"');
@@ -33,7 +33,8 @@ class CsvEnclosureTest extends TestCase
         $this->assertEquals($expected, $parser->toArray());
     }
 
-    public function testToArrayFailsToReturnExpectedCSvArrayRepresentationIfCsvDataHasOtherThanDefaultEnclosureAndParserEnclosureIsNotSet()
+
+    public function testToCsvFailsForDataWithOtherThanDefaultEnclosureAndParserEnclosureNotSet()
     {
         $expected = [['foo' => 'bar', 'boo' => 'far']];
         $parser = new CsvParser($this->simpleCsv, ';');
@@ -49,8 +50,8 @@ class CsvEnclosureTest extends TestCase
         $this->assertEquals($expected, $parser->toJson());
     }
 
-    public function testToJsonFailsToReturnsExpectedJsonRepresentationOfNamedArrayIfCsvDataHasOtherThanDefaultEnclosureAndParserEnclosureIsNotSet()
-    {
+    public function testToJsonFailsForDataWithOtherThanDefaultEnclosureAndParserEnclosureNotSet()
+   {
         $expected = '[{"foo":"bar","boo":"far"}]';
         $parser = new CsvParser($this->simpleCsv, ';');
 
