@@ -24,7 +24,7 @@ class CsvEnclosureTest extends TestCase
 
         $this->assertEquals($parser->getEnclosure(), '|');
     }
-    
+
     public function testToArrayReturnsCsvArrayRepresentation()
     {
         $expected = [['foo' => 'bar', 'boo' => 'far']];
@@ -32,7 +32,6 @@ class CsvEnclosureTest extends TestCase
 
         $this->assertEquals($expected, $parser->toArray());
     }
-
 
     public function testToCsvFailsForDataWithOtherThanDefaultEnclosureAndParserEnclosureNotSet()
     {
